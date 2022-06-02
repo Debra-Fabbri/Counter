@@ -12,7 +12,7 @@ body{
     display: flex;
 }
 
-.counter{
+.contador{
     border: 2.5px solid #393e41;
     border-radius: 10px;
     width: 400px;
@@ -42,11 +42,18 @@ body{
     margin-top: 20px;
 }
 
+.count{
+    font-size: 20vh;
+}
+
 @media (max-width: 400px){
     .btns{
         align-items: center;
         justify-content: center;
         display: flex;
         flex-direction: column;
+    }
+    .count{
+        font-size: 40px;
     }
 }
