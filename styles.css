@@ -5,6 +5,8 @@
 }
 
 body{
+    display: flex;
+    justify-content: center;
     background-color: #e7bb41;
     transition: .3s ease all;
 }
@@ -129,6 +131,24 @@ span{
     display: block;
     background: none;
     color: #e7e5df;
+}
+
+@media (max-width: 969px){
+    .secundario{
+        margin-left: 0;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    .container{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+    .contador{
+        margin-top: 50px;
+        width: 250px;
+    }
 }
 
 @media (max-width: 400px){
