@@ -24,7 +24,7 @@ body.dark{
     border: 2.5px solid #393e41;
     border-radius: 10px;
     width: 400px;
-    height: 400px;
+    height: 500px;
     margin-top: 150px;
     display: flex;
     flex-direction: column;
@@ -149,9 +149,6 @@ span{
         margin-top: 50px;
         width: 250px;
     }
-}
-
-@media (max-width: 400px){
     .btn-container{
         align-items: center;
         justify-content: center;
