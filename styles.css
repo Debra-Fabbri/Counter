@@ -15,6 +15,7 @@ body.dark{
 
 .container{
     display: flex;
+    justify-content: center;
 }
 
 .contador{
@@ -22,13 +23,16 @@ body.dark{
     border-radius: 10px;
     width: 400px;
     height: 400px;
-    margin: auto;
-    margin-top: 55px;
+    margin-top: 150px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     background-color: #e7e5df;
+}
+
+.secundario{
+    margin-left: 150px;
 }
 
 body.dark .contador{
@@ -77,6 +81,10 @@ body.dark .decrease:hover{
 
 body.dark .reset:hover{
     background-color: #fc2f00;
+}
+
+body.dark .newCounter:hover{
+    background-color: #e7bb41;
 }
 
 .switch{

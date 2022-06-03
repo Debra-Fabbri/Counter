@@ -62,3 +62,39 @@ if(localStorage.getItem('dark-mode') === 'true'){
     document.body.classList.remove('dark');
     btnSwitch.classList.remove('active');
 }
+
+//DOM NEW COUNTER
+document.getElementById('newCounter').addEventListener("click", function () {
+    var contadorNuevo = document.getElementById("nuevoContador");
+    contadorNuevo.innerHTML = `<div class="contador secundario">
+                                    <h1 class="title">COUNTER</h1>
+                                    <h2 class="count" id="counterB">0</h2>
+                                    <div class="btn-container">
+                                        <button type="button" class="btn B btn-outline-dark increase" >Increase</button>
+                                        <button type="button" class="btn B btn-outline-dark decrease" >Decrease</button>
+                                        <button type="button" class="btn B btn-outline-dark reset" >Reset</button>
+                                        <button type="button" class="btn B btn-outline-dark remove" id="remove">Remove</button>
+                                    </div>
+                                </div>`
+    
+    const counter = document.querySelector('#counterB');
+    const btns = document.querySelectorAll('.B');
+    let count = 0;
+    
+    btns.forEach((B) => {
+        B.addEventListener('click', (e) => {
+        const styles = e.currentTarget.classList;
+                                    
+            if(styles.contains('increase')){
+                count ++;
+            }else if(styles.contains('decrease')){
+                count --;
+            }else{
+                count = 0;
+            };
+
+            counter.textContent = count;
+
+        });
+    });   
+});
