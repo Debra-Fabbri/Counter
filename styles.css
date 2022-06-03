@@ -6,6 +6,11 @@
 
 body{
     background-color: #e7bb41;
+    transition: .3s ease all;
+}
+
+body.dark{
+    background: black;
 }
 
 .container{
@@ -26,6 +31,18 @@ body{
     background-color: #e7e5df;
 }
 
+body.dark .contador{
+    background: #393e41;
+}
+
+body.dark .title{
+    color: #e7e5df;
+}
+
+body.dark .count{
+    color: #e7e5df;
+}
+
 .increase:hover{
     background-color: #44bba4;
 }
@@ -35,10 +52,10 @@ body{
 }
 
 .reset:hover{
-    background-color: #d3d0cb;
+    background-color: #fc2f00;
 }
 
-.btn, .count{
+.btn, .count, .switch{
     margin-top: 20px;
 }
 
@@ -46,8 +63,68 @@ body{
     font-size: 20vh;
 }
 
+body.dark .btn{
+    background: #e7e5df;
+}
+
+body.dark .increase:hover{
+    background-color: #44bba4;
+}
+
+body.dark .decrease:hover{
+    background-color: #ec7d10;
+}
+
+body.dark .reset:hover{
+    background-color: #fc2f00;
+}
+
+.switch{
+    background: #393e41;
+    border-radius: 1000px;
+    border: none;
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    outline: none;
+}
+
+.switch::after{
+    content: "";
+    display: block;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    background: #e7e5df;
+    top: 0;
+    left: 0;
+    right: unset;
+    border-radius: 100px;
+    transition: .3s ease all;
+    box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, .2);
+}
+
+.switch.active{
+    background: #ec7d10;
+    color: black;
+}
+
+.switch.active::after{
+    right: 0;
+    left: unset;
+}
+
+span{
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    display: block;
+    background: none;
+    color: #e7e5df;
+}
+
 @media (max-width: 400px){
-    .btns{
+    .btn-container{
         align-items: center;
         justify-content: center;
         display: flex;
